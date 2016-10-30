@@ -1,0 +1,18 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+dependencies {
+    // Maven Repository libraries
+    compile group: 'org.slf4j', name: 'slf4j-api', version: "$slf4jVersion"
+    compile group: 'ch.qos.logback', name: 'logback-core', version: "$logbackVersion"
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: "$logbackVersion"
+}
