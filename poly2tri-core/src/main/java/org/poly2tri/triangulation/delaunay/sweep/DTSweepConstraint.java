@@ -37,7 +37,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 
- * @author Thomas Åhlén, thahlen@gmail.com
+ * @author Thomas ï¿½hlï¿½n, thahlen@gmail.com
  *
  */
 public class DTSweepConstraint extends TriangulationConstraint
@@ -73,7 +73,8 @@ public class DTSweepConstraint extends TriangulationConstraint
             }
             else if( p1.getX() == p2.getX() )
             {
-                logger.info( "Failed to create constraint {}={}", p1, p2 );
+                logger.error( "Failed to create constraint {}={}", p1, p2 );
+                throw new RuntimeException("Duplicate point : " + p1 + "=" + p2 );
 //                throw new DuplicatePointException( p1 + "=" + p2 );
 //                return;
             }
